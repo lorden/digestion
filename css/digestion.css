@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+#welcome {
+    margin-top: -100px;
+}
 /* <<< Global elements */
 
 /* Header >>> */
@@ -39,8 +42,10 @@
     border: 1px solid #00FF00;
     border-radius: 10px;
     float: left;
-    padding: 3px;
     text-align: center;
+}
+img.food-img {
+    height:50px;
 }
 /* <<< Food groups */
 

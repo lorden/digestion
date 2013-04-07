@@ -20,10 +20,12 @@
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/digestion.js"></script>
+    <script type="text/javascript" src="/js/jquery.foggy.min.js"></script>
 
   </head>
 
   <body>
+
     <div id="header" class="navbar navbar-top">
       <div class="navbar-inner">
         <div class="container">
@@ -38,75 +40,67 @@
     </div>
 
     <div id="main-container" class="container">
-        <select id="preset">
-            <option value="all">I eat everything</option>
-            <option value="veget">I am vegetarian</option>
-            <option value="vegan">I am vegan</option>
-            <option value="gluten">I am allergic to gluten</option>
-            <option value="milk">I am lactose intolerant</option>
-        </select>
-        <button class="btn-success btn-small">Start!</button>
-    </div>
 
-    <div class="row container accordion" id="food-groups">
-        <div class="food-group span12 accordion-group">
-            <div class="food-group-title accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animals">Animals</a>
-            </div>
-            <div class="food-group-items accordion-body collapse in" id="animals">
-                <div class="accordion-inner">
-                    <div class="food-group-item">Beef</div>
-                    <div class="food-group-item">Poultry</div>
-                    <div class="food-group-item">Pork</div>
-                    <div class="food-group-item">Fish</div>
-                    <div class="food-group-item">Shellfish</div>
+        <div class="row container accordion" id="food-groups">
+            <div class="food-group span12 accordion-group">
+                <div class="food-group-title accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animals">Animals</a>
+                </div>
+                <div class="food-group-items accordion-body collapse in" id="animals">
+                    <div class="accordion-inner">
+                        <div class="food-group-item"><img src="/img/beef.svg" alt="Beef" class="food-img" data-toggle="popover" data-placement="bottom" data-content="Cow"/></div>
+                        <div class="food-group-item"><img src="/img/poultry.svg" alt="Poultry" class="food-img" /></div>
+                        <div class="food-group-item">Pork</div>
+                        <div class="food-group-item">Fish</div>
+                        <div class="food-group-item">Shellfish</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-group span12 accordion-group">
-            <div class="food-group-title accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animal-products">Animal Products</a>
-            </div>
-            <div class="food-group-items accordion-body collapse" id="animal-products">
-                <div class="accordion-inner">
-                <div class="food-group-item">Milk</div>
-                <div class="food-group-item">Cheese</div>
-                <div class="food-group-item">Yogurt</div>
-                <div class="food-group-item">Eggs</div>
-                <div class="food-group-item">Honey</div>
+            <div class="food-group span12 accordion-group">
+                <div class="food-group-title accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animal-products">Animal Products</a>
+                </div>
+                <div class="food-group-items accordion-body collapse" id="animal-products">
+                    <div class="accordion-inner">
+                    <div class="food-group-item">Milk</div>
+                    <div class="food-group-item">Cheese</div>
+                    <div class="food-group-item">Yogurt</div>
+                    <div class="food-group-item">Eggs</div>
+                    <div class="food-group-item">Honey</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-group span12 accordion-group">
-            <div class="food-group-title accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#nuts">Nuts</a>
-            </div>
-            <div class="food-group-items accordion-body collapse" id="nuts">
-                <div class="accordion-inner">
-                <div class="food-group-item">Peanuts</div>
-                <div class="food-group-item">Tree Nuts</div>
+            <div class="food-group span12 accordion-group">
+                <div class="food-group-title accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#nuts">Nuts</a>
+                </div>
+                <div class="food-group-items accordion-body collapse" id="nuts">
+                    <div class="accordion-inner">
+                    <div class="food-group-item">Peanuts</div>
+                    <div class="food-group-item">Tree Nuts</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-group span12 accordion-group">
-            <div class="food-group-title accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#cereals">Cereals</a>
-            </div>
-            <div class="food-group-items accordion-body collapse" id="cereals">
-                <div class="accordion-inner">
-                <div class="food-group-item">Wheat</div>
-                <div class="food-group-item">Barley</div>
-                <div class="food-group-item">Rye</div>
+            <div class="food-group span12 accordion-group">
+                <div class="food-group-title accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#cereals">Cereals</a>
+                </div>
+                <div class="food-group-items accordion-body collapse" id="cereals">
+                    <div class="accordion-inner">
+                    <div class="food-group-item">Wheat</div>
+                    <div class="food-group-item">Barley</div>
+                    <div class="food-group-item">Rye</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="food-group span12 accordion-group">
-            <div class="food-group-title accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#legumes">Legumes</a>
-            </div>
-            <div class="food-group-items accordion-body collapse" id="legumes">
-                <div class="accordion-inner">
-                <div class="food-group-item">Soy</div>
+            <div class="food-group span12 accordion-group">
+                <div class="food-group-title accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#legumes">Legumes</a>
+                </div>
+                <div class="food-group-items accordion-body collapse" id="legumes">
+                    <div class="accordion-inner">
+                    <div class="food-group-item">Soy</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,6 +127,23 @@ this doesn’t seem that hard of a problem.</p>
                     <p>PETA</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="welcome" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="false">
+        <div class="modal-header">
+            <h3 id="myModalLabel">Welcome to Digestion</h3>
+        </div>
+        <div class="modal-body">
+            <select id="preset">
+                <option value="all">I eat everything</option>
+                <option value="veget">I am vegetarian</option>
+                <option value="vegan">I am vegan</option>
+                <option value="gluten">I am allergic to gluten</option>
+                <option value="milk">I am lactose intolerant</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button id="start" class="btn-success btn">Start!</button>
         </div>
     </div>
 </body>
