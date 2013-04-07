@@ -1,0 +1,72 @@
+/* Global elements >>> */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* <<< Global elements */
+
+/* Header >>> */
+.navbar .brand {
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.navbar .subtitle {
+    color: #FFFFFF;
+    display: block;
+    padding: 10px 5px;
+}
+
+#header .navbar-inner {
+    border-radius: 0;
+    background: #5dc349;
+}
+
+/* <<< Header */
+
+/* Food groups >>> */
+.food-group {
+    border: 1px solid wheat;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+}
+
+.food-group-item {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border: 1px solid #00FF00;
+    border-radius: 10px;
+    float: left;
+    padding: 3px;
+    text-align: center;
+}
+/* <<< Food groups */
+
+/* Footer >>> */
+#footer {
+    margin-top: 20px;
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
+
+#footer .container {
+    padding: 20px 0;
+}
+
+#footer .navbar-inner {
+    border-radius: 0;
+    background: #5dc349;
+}
+
+#friends p {
+    margin: 0;
+}
+/* <<< Footer */
+
+/* Colors
+20C100 light green 
+249F0B dark green
+7ac16c pale
+*/

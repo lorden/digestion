@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digestion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/digestion.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/digestion.js"></script>
+
+  </head>
+
+  <body>
+    <div id="header" class="navbar navbar-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Digestion</a>
+          <span class="subtitle">Vegetarian . Vegan . Raw . Gluten-free . Lactose-intolerant . Allergies </span>
+          <div class="nav-collapse">
+            <ul class="nav">
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="main-container" class="container">
+        <select id="preset">
+            <option value="all">I eat everything</option>
+            <option value="veget">I am vegetarian</option>
+            <option value="vegan">I am vegan</option>
+            <option value="gluten">I am allergic to gluten</option>
+            <option value="milk">I am lactose intolerant</option>
+        </select>
+        <button class="btn-success btn-small">Start!</button>
+    </div>
+
+    <div class="row container accordion" id="food-groups">
+        <div class="food-group span12 accordion-group">
+            <div class="food-group-title accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animals">Animals</a>
+            </div>
+            <div class="food-group-items accordion-body collapse in" id="animals">
+                <div class="accordion-inner">
+                    <div class="food-group-item">Beef</div>
+                    <div class="food-group-item">Poultry</div>
+                    <div class="food-group-item">Pork</div>
+                    <div class="food-group-item">Fish</div>
+                    <div class="food-group-item">Shellfish</div>
+                </div>
+            </div>
+        </div>
+        <div class="food-group span12 accordion-group">
+            <div class="food-group-title accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#animal-products">Animal Products</a>
+            </div>
+            <div class="food-group-items accordion-body collapse" id="animal-products">
+                <div class="accordion-inner">
+                <div class="food-group-item">Milk</div>
+                <div class="food-group-item">Cheese</div>
+                <div class="food-group-item">Yogurt</div>
+                <div class="food-group-item">Eggs</div>
+                <div class="food-group-item">Honey</div>
+                </div>
+            </div>
+        </div>
+        <div class="food-group span12 accordion-group">
+            <div class="food-group-title accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#nuts">Nuts</a>
+            </div>
+            <div class="food-group-items accordion-body collapse" id="nuts">
+                <div class="accordion-inner">
+                <div class="food-group-item">Peanuts</div>
+                <div class="food-group-item">Tree Nuts</div>
+                </div>
+            </div>
+        </div>
+        <div class="food-group span12 accordion-group">
+            <div class="food-group-title accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#cereals">Cereals</a>
+            </div>
+            <div class="food-group-items accordion-body collapse" id="cereals">
+                <div class="accordion-inner">
+                <div class="food-group-item">Wheat</div>
+                <div class="food-group-item">Barley</div>
+                <div class="food-group-item">Rye</div>
+                </div>
+            </div>
+        </div>
+        <div class="food-group span12 accordion-group">
+            <div class="food-group-title accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#food-groups" href="#legumes">Legumes</a>
+            </div>
+            <div class="food-group-items accordion-body collapse" id="legumes">
+                <div class="accordion-inner">
+                <div class="food-group-item">Soy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="navbar navbar-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="span7">
+                    <h3>Digestion</h3>
+                    <p>The year is 2112 and humankind has conquered the solar system. The Space Ranger Corps have set
+up bases on any hunk of rock that is even remotely inhabitable. Your job as a member of the Asteroid
+Communications Ministry is to make sure that all of the Space Ranger asteroid bases can communicate
+with one another as cheaply as possible. You could set up direct communication links from each base
+to every other base, but that would be prohibitively expensive. Instead, you want to set up the minimum
+number of links so that everyone can send messages to everyone else, potentially relayed by one or more
+bases. The cost of any link is directly proportional to the distance between the two bases it connects, so
+this doesn’t seem that hard of a problem.</p>
+                </div>
+                <div id="friends" class="span4">
+                    <h3>Friends</h3>
+                    <p>HappyCow</p>
+                    <p>Vegansaurus</p>
+                    <p>PETA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
