@@ -22,30 +22,42 @@
 
 #header .navbar-inner {
     border-radius: 0;
-    background: #5dc349;
+    background: #249F0B;
 }
 
 /* <<< Header */
 
 /* Food groups >>> */
 .food-group {
-    border: 1px solid wheat;
+    border: 3px solid #CECECE;
     border-radius: 10px;
     margin: 0 0 10px 0;
     padding: 10px;
 }
 
+.food-group-title a img {
+    margin-top: -10px;
+}
+
 .food-group-item {
-    height: 50px;
-    width: 50px;
-    margin: 5px;
-    border: 1px solid #00FF00;
+    height: 110px;
+    width: 110px;
+    margin: 5px 10px;
+    border: 10px solid #5DC349;
     border-radius: 10px;
     float: left;
     text-align: center;
+    cursor: pointer;
 }
+
+.food-group-item.removed{
+    background: url('../img/cross.png') top right no-repeat;
+    border: 10px solid #FF0000;
+}
+
 img.food-img {
-    height:50px;
+    height:100px;
+    padding: 5px;
 }
 /* <<< Food groups */
 
