@@ -59,6 +59,10 @@ img.food-img {
     height:100px;
     padding: 5px;
 }
+
+#print-container {
+    text-align: center;
+}
 /* <<< Food groups */
 
 /* Footer >>> */
