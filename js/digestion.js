@@ -18,12 +18,12 @@ $(document).ready(function(){
         $('#footer').foggy(false);
         createCookie("digestion", $('#preset').val(), 90);
         selectItems($('#preset').val());
-        checkGroup(null);
+        // checkGroup(null);
     });
 
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
-        checkGroup($(this).parent().parent().attr('id'));
+        // checkGroup($(this).parent().parent().attr('id'));
     });
     
 });
@@ -41,31 +41,37 @@ function selectItems(mode){
         $('#eggs').addClass('removed');
         $('#honey').addClass('removed');
     }
+    if(mode == 'gluten'){
+        $('#gluten').addClass('removed');
+    }
+    if(mode == 'milk'){
+        $('#dairy').addClass('removed');
+    }
 }
 
-function checkGroup(group){
-    if(group !== null){
-        var root = '#' + group;
-    } else {
-        var root = '.food-group';
-    }
-    $(root).each(function(){
-        var total = 0;
-        var removed = 0;
-        $(this).find('.food-group-item').each(function(){
-            if($(this).hasClass('removed')){
-                removed += 1;
-            }
-            total += 1;
-        });
-        if(removed == 0){
-            $(this).append('<img src="/img/check.png" alt="" />');
-        } else if(total === removed){
-            $(this).append('<img src="/img/cross.png" alt="" />');
-        } else {
-        }
-    });
-}
+// function checkGroup(group){
+//     if(group !== null){
+//         var root = '#' + group;
+//     } else {
+//         var root = '.food-group';
+//     }
+//     $(root).each(function(){
+//         var total = 0;
+//         var removed = 0;
+//         $(this).find('.food-group-item').each(function(){
+//             if($(this).hasClass('removed')){
+//                 removed += 1;
+//             }
+//             total += 1;
+//         });
+//         if(removed == 0){
+//             $(this).append('<img src="img/check.png" alt="" />');
+//         } else if(total === removed){
+//             $(this).append('<img src="img/cross.png" alt="" />');
+//         } else {
+//         }
+//     });
+// }
 
 function createCookie(name, value, days) {
     if (days) {
