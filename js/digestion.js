@@ -21,12 +21,25 @@ $(document).ready(function(){
         // checkGroup(null);
     });
 
+    $('#reset').click(function(){
+        deSelect();
+        eraseCookie('digestion');
+        $('#welcome').modal();
+        $('#header').foggy();
+        $('#main-container').foggy();
+        $('#footer').foggy();
+    });
+
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
         // checkGroup($(this).parent().parent().attr('id'));
     });
-    
+
 });
+
+function deSelect () {
+    $('.food-group-item').removeClass('removed');
+}
 
 function selectItems(mode){
     if(mode == 'veget' || mode == 'vegan'){
