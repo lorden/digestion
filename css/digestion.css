@@ -108,6 +108,34 @@ img.food-img {
 }
 /* <<< Footer */
 
+/* Feedback >>> */
+#feedback-tab {
+    width: 12px;
+    padding: 5px;
+    height: 220px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    background: #5dc349;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+#feedback-form-div {
+    width: 220px;
+    padding: 10px;
+    border: 2px solid #000;
+    background: #5dc349;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+/* <<< Feedback */
+
 /* Colors
 20C100 light green 
 249F0B dark green

@@ -44,6 +44,14 @@ $(document).ready(function(){
             $('#card-content').append($(this).attr('id') + ' ');
         });
     });
+
+    $('#feedback-tab').click(function(){
+        $('#feedback-form-div').animate({width: 'toggle'});
+    });
+
+    $('#send').click(function(){
+        $('#feedback-form-div').animate({width: 'toggle'});
+    });
 });
 
 function deSelect () {
