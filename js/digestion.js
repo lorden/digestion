@@ -1,34 +1,34 @@
 $(document).ready(function(){
-    if(!readCookie("digestion")){
+    // if(!readCookie("digestion")){
         // blur
         $('#welcome').modal();
         $('#header').foggy();
-        $('#main-container').foggy();
+        $('#main-container-step1').foggy();
         $('#footer').foggy();
-    } else {
-        var preset = readCookie("digestion");
-        selectItems(preset);
-        // eraseCookie('digestion');
-    }
+    // } else {
+    //     var preset = readCookie("digestion");
+    //     selectItems(preset);
+    //     // eraseCookie('digestion');
+    // }
 
     $('#start').click(function(){
         $('#welcome').modal('hide');
         $('#header').foggy(false);
-        $('#main-container').foggy(false);
+        $('#main-container-step1').foggy(false);
         $('#footer').foggy(false);
-        createCookie("digestion", $('#preset').val(), 90);
+        // createCookie("digestion", $('#preset').val(), 90);
         selectItems($('#preset').val());
         // checkGroup(null);
     });
 
     $('#reset').click(function(){
         deSelect();
-        eraseCookie('digestion');
-        $('#main-container1').show();
-        $('#main-container2').hide();
+        // eraseCookie('digestion');
+        $('#main-container-step1').show();
+        $('#main-container-step2').hide();
         $('#welcome').modal();
         $('#header').foggy();
-        $('#main-container').foggy();
+        $('#main-container-step1').foggy();
         $('#footer').foggy();
     });
 
@@ -38,9 +38,11 @@ $(document).ready(function(){
     });
 
     $('#makecard').click(function(){
-        $('#main-container1').hide();
-        $('#main-container2').show();
-        $('#card-container').append($('.food-group-item.removed'));
+        $('#main-container-step1').hide();
+        $('#main-container-step2').show();
+        $('.food-group-item.removed').each(function () {
+            $('#card-content').append($(this).attr('id') + ' ');
+        });
     });
 });
 

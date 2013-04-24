@@ -7,7 +7,7 @@
     margin-top: -100px;
 }
 
-#main-container2 {
+#main-container-step2 {
     display: none;
 }
 /* <<< Global elements */
@@ -68,6 +68,24 @@ img.food-img {
     text-align: center;
 }
 /* <<< Food groups */
+
+/* Card >>> */
+#card {
+    height: 154px;
+    width: 244px;
+    border: 2px dashed;
+}
+#card-content {
+    height: 140px;
+    width: 244px;
+}
+#name {
+    float: left;
+}
+#website {
+    float: right;
+}
+/* <<< Card */
 
 /* Footer >>> */
 #footer {
