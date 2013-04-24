@@ -42,6 +42,14 @@ $(document).ready(function(){
         $('#main-container2').show();
         $('#card-container').append($('.food-group-item.removed'));
     });
+
+    $('#feedback-tab').click(function(){
+        $('#feedback-form-div').animate({width: 'toggle'});
+    });
+
+    $('#send').click(function(){
+        $('#feedback-form-div').animate({width: 'toggle'});
+    });
 });
 
 function deSelect () {
