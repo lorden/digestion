@@ -24,6 +24,8 @@ $(document).ready(function(){
     $('#reset').click(function(){
         deSelect();
         eraseCookie('digestion');
+        $('#main-container1').show();
+        $('#main-container2').hide();
         $('#welcome').modal();
         $('#header').foggy();
         $('#main-container').foggy();
@@ -35,6 +37,11 @@ $(document).ready(function(){
         // checkGroup($(this).parent().parent().attr('id'));
     });
 
+    $('#makecard').click(function(){
+        $('#main-container1').hide();
+        $('#main-container2').show();
+        $('#card-container').append($('.food-group-item.removed'));
+    });
 });
 
 function deSelect () {

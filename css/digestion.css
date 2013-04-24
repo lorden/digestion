@@ -6,6 +6,10 @@
 #welcome {
     margin-top: -100px;
 }
+
+#main-container2 {
+    display: none;
+}
 /* <<< Global elements */
 
 /* Header >>> */
