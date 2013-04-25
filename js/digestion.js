@@ -45,9 +45,9 @@ $(document).ready(function(){
 
     $('#feedback-tab').click(function(){
         $('#feedback-form-div').animate({width: 'toggle'});
+        $('#name').focus();
     });
-
-    $('#send').click(function(){
+    $('#feedback-close').click(function(){
         $('#feedback-form-div').animate({width: 'toggle'});
     });
 });

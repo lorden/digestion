@@ -10,6 +10,9 @@
 #main-container2 {
     display: none;
 }
+a {
+    color: #FC9D9A;
+}
 /* <<< Global elements */
 
 /* Header >>> */
@@ -26,14 +29,14 @@
 
 #header .navbar-inner {
     border-radius: 0;
-    background: #249F0B;
+    background: #83AF9B;
 }
 
 /* <<< Header */
 
 /* Food groups >>> */
 .food-group {
-    border: 3px solid #CECECE;
+    border: 3px solid #C8C8A9;
     border-radius: 10px;
     margin: 0 0 10px 0;
     padding: 10px;
@@ -47,7 +50,7 @@
     height: 110px;
     width: 110px;
     margin: 5px 10px;
-    border: 10px solid #5DC349;
+    border: 10px solid #C8C8A9;
     border-radius: 10px;
     float: left;
     text-align: center;
@@ -82,7 +85,7 @@ img.food-img {
 
 #footer .navbar-inner {
     border-radius: 0;
-    background: #5dc349;
+    background: #3F5229;
 }
 
 #friends p {
@@ -92,29 +95,37 @@ img.food-img {
 
 /* Feedback >>> */
 #feedback-tab {
-    width: 12px;
+    width: 15px;
     padding: 5px;
-    height: 220px;
+    height: 100px;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
-    background: #5dc349;
+    background: url('../img/feedback.png') no-repeat 5px 5px #F9CDAD;
     position: fixed;
     top: 50px;
     right: 0;
     cursor: pointer;
-    border-radius: 5px 0 0 5px;
+    border-radius: 10px 0 0 10px;
 }
+
 #feedback-form-div {
     width: 220px;
     padding: 10px;
     border: 2px solid #000;
-    background: #5dc349;
+    background: #F9CDAD;
     position: fixed;
     top: 50px;
     right: 0;
     cursor: pointer;
     display: none;
+    border-radius: 10px 0 0 10px;
+}
+
+#feedback-close {
+    width: 220px;
+    font-size: 11px;
+    text-align: right;
 }
 /* <<< Feedback */
 
