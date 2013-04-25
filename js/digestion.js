@@ -21,16 +21,16 @@ $(document).ready(function(){
         // checkGroup(null);
     });
 
-    $('#reset').click(function(){
-        deSelect();
-        // eraseCookie('digestion');
-        $('#main-container-step1').show();
-        $('#main-container-step2').hide();
-        $('#welcome').modal();
-        $('#header').foggy();
-        $('#main-container-step1').foggy();
-        $('#footer').foggy();
-    });
+    // $('#reset').click(function(){
+    //     deSelect();
+    //     // eraseCookie('digestion');
+    //     $('#main-container-step1').show();
+    //     $('#main-container-step2').hide();
+    //     $('#welcome').modal();
+    //     $('#header').foggy();
+    //     $('#main-container-step1').foggy();
+    //     $('#footer').foggy();
+    // });
 
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
@@ -40,9 +40,13 @@ $(document).ready(function(){
     $('#makecard').click(function(){
         $('#main-container-step1').hide();
         $('#main-container-step2').show();
+        var numberItems = 0;
         $('.food-group-item.removed').each(function () {
-            $('#card-content').append($(this).attr('id') + ' ');
+            numberItems++;
+            $('#card-content').append('<img src="img/' + $(this).attr('id') + '.png" alt="' + $(this).attr('id') + '" class="food-img-card" />');
         });
+        $('.food-img-card').css('width', 244/numberItems + 'px');
+
     });
 
     $('#feedback-tab').click(function(){
