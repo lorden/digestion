@@ -136,9 +136,16 @@
       <div class="row span12 container" id="print-container">
         <button class="btn btn-large btn-primary" id="print">Print card</button>
       </div>
-      <div class="row span12 container" id="card-container">
-          <p>Happy card</p>
+      <div class="row span6 container" id="options-container">
+        <p>Show message in:</p>
+        <input type="checkbox" class="language" id="english"> English</input><br />
+        <input type="checkbox" class="language" id="spanish"> Spanish</input>
+      </div>
+      <div class="row span6 container" id="card-container">
+          <p>Your card</p>
           <div id="card">
+            <p class="message" id="english">I cannot eat these ingredients. Could you please help me identify food to enjoy without them?</p>
+            <p class="message" id="spanish">No puedo consumir estos ingredientes. Ud. me podria ayudar encontrar comida sin aquellos?</p>
             <div id="card-content"></div>
             <span id="name">Name</span>
             <span id="website">www.name.com</span>

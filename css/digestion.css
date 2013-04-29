@@ -70,6 +70,15 @@ img.food-img {
 /* <<< Food groups */
 
 /* Card >>> */
+#options-container {
+    float: left;
+}
+#card-container {
+    float: right;
+}
+.message {
+    display: none;
+}
 #card {
     height: 154px;
     width: 244px;

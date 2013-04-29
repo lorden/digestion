@@ -49,6 +49,17 @@ $(document).ready(function(){
 
     });
 
+    $('.language').click(function(){
+        if (this.checked) {
+            // show message corresponding to ID on card
+            $('.message#' + $(this).attr('id')).show();
+        }
+        else if (!this.checked) {
+            // remove message from card
+            $('.message#' + $(this).attr('id')).hide();
+        }
+    });
+
     $('#feedback-tab').click(function(){
         $('#feedback-form-div').animate({width: 'toggle'});
     });
