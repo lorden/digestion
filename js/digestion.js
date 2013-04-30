@@ -1,3 +1,5 @@
+var numberItems = 0;
+
 $(document).ready(function(){
     // if(!readCookie("digestion")){
         // blur
@@ -40,13 +42,12 @@ $(document).ready(function(){
     $('#makecard').click(function(){
         $('#main-container-step1').hide();
         $('#main-container-step2').show();
-        var numberItems = 0;
+        numberItems = 0;
         $('.food-group-item.removed').each(function () {
             numberItems++;
             $('#card-content').append('<img src="img/' + $(this).attr('id') + '.png" alt="' + $(this).attr('id') + '" class="food-img-card" />');
         });
-        $('.food-img-card').css('width', 244/numberItems + 'px');
-
+        resizeImages();
     });
 
     $('.language').click(function(){
@@ -58,6 +59,7 @@ $(document).ready(function(){
             // remove message from card
             $('.message#' + $(this).attr('id')).hide();
         }
+        resizeImages();
     });
 
     $('#feedback-tab').click(function(){
@@ -92,6 +94,15 @@ function selectItems(mode){
     if(mode == 'milk'){
         $('#dairy').addClass('removed');
     }
+}
+
+function resizeImages() {
+    $('.food-img-card').css('width', 244/numberItems + 'px');
+    console.log($('#messages-container').css('height'));
+    // need to calculate remaining height available -- 140 minus the above
+    // then decide how to best approach sizing and placing the images
+    // and get rid of simplistic calculation on first line here
+
 }
 
 // function checkGroup(group){

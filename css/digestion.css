@@ -76,17 +76,29 @@ img.food-img {
 #card-container {
     float: right;
 }
-.message {
-    display: none;
-}
 #card {
     height: 154px;
     width: 244px;
     border: 2px dashed;
+    padding: 4px;
 }
 #card-content {
     height: 140px;
     width: 244px;
+}
+.message {
+    display: none;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid gray;
+    /* research how to not show border for last item */
+}
+.food-img-card {
+    padding: 2px;
+    margin: 2px;
+    background: url('../img/cross.png') top right no-repeat;
+    border: 1px solid gray;
 }
 #name {
     float: left;
