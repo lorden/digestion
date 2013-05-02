@@ -99,10 +99,13 @@ function selectItems(mode){
 function resizeImages() {
     $('.food-img-card').css('width', 244/numberItems + 'px');
     console.log($('#messages-container').css('height'));
-    // need to calculate remaining height available -- 140 minus the above
+    // need to calculate remaining height available -- 140 minus the above (convert to number)
     // then decide how to best approach sizing and placing the images
     // and get rid of simplistic calculation on first line here
-
+    // 
+    // then, next problem= how to scale background, or make cross size correspond to img size
+    // also want to make food img and border smaller, allowing cross to overlap.
+    // could solve both problems by creating an image copy for card but is worth it to load 2nd img?
 }
 
 // function checkGroup(group){
