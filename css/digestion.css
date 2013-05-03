@@ -1,4 +1,5 @@
 /* Global elements >>> */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,14 +12,21 @@
     display: none;
 }
 a {
-    color: #FC9D9A;
+    color: #0079cc;
 }
 /* <<< Global elements */
+
+/* Welcome modal >>> */
+.modal-body {
+    text-align: center;
+}
+/* <<< Welcome modal */
 
 /* Header >>> */
 .navbar .brand {
     color: #FFFFFF;
     margin: 0 auto;
+    padding: 8px 20px;
 }
 
 .navbar .subtitle {
@@ -29,15 +37,17 @@ a {
 
 #header .navbar-inner {
     border-radius: 0;
-    background: #83AF9B;
+    background: #28ad00;
 }
 
 /* <<< Header */
 
 /* Food groups >>> */
 .food-group {
-    border: 3px solid #C8C8A9;
-    border-radius: 10px;
+/*
+    border: 1px solid #919ebd;
+*/
+    background: #F6F6F6;
     margin: 0 0 10px 0;
     padding: 10px;
 }
@@ -50,8 +60,9 @@ a {
     height: 110px;
     width: 110px;
     margin: 5px 10px;
-    border: 10px solid #C8C8A9;
+    border: 10px solid #8df06a;
     border-radius: 10px;
+    background: #FFFFFF;
     float: left;
     text-align: center;
     cursor: pointer;
@@ -145,11 +156,11 @@ img.food-img {
     top: 50px;
     right: 0;
     cursor: pointer;
-    border-radius: 10px 0 0 10px;
 }
 
 #feedback-form-div {
     width: 220px;
+    height: 270px;
     padding: 10px;
     border: 2px solid #000;
     background: #F9CDAD;

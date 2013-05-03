@@ -29,8 +29,8 @@
     <div id="header" class="navbar navbar-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">Digestion</a>
-          <span class="subtitle">Vegetarian . Vegan . Gluten free . Lactose intolerant . Food Allergies </span>
+          <a class="brand" href="/"><img src="img/logo.png" alt="Meal Request"/></a>
+          <span class="subtitle">Vegetarian . Vegan . Gluten free . Lactose intolerant . Food Allergies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FB] [TW] [G+]</span>
           <div class="nav-collapse">
             <ul class="nav">
             </ul>
@@ -178,23 +178,19 @@
             <p>Make a card with pictures of any dietary restrictions or foods you'd rather avoid to easily communicate your allergens or preferences in restaurants, grocery stores, or other places you want to enjoy eating, all around the world. Print your personalized card in moments.</p>
         </div>
         <div class="modal-body">
-            <select id="preset">
-                <option value="all">I eat most everything</option>
-                <option value="veget">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="gluten">Gluten free</option>
-                <option value="milk">Lactose free</option>
-            </select>
-        </div>
-        <div class="modal-footer">
-            <button id="start" class="btn-success btn">Start!</button>
+            <p>Choose what's best for you:</p>
+            <button id="all" class="preselection btn btn-primary">Mostly omnivore</button>
+            <button id="veget" class="preselection btn btn-primary">Vegetarian</button>
+            <button id="vegan" class="preselection btn btn-primary">Vegan</button>
+            <button id="gluten" class="preselection btn btn-primary">Gluten free</button>
+            <button id="milk" class="preselection btn btn-primary">Lactose free</button>
         </div>
     </div>
 
     <div id="feedback">
         <div id="feedback-tab"></div>
         <div id="feedback-form-div">
-            <form action="#" method="post">
+            <form action="#" id="feedback-form" method="post">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name"/>
                 <label for="email">Email</label>
@@ -202,8 +198,8 @@
                 <label for="message">Message</label>
                 <textarea name="message" id="message"></textarea>
                 <br/>
-                <button class="btn btn-large" id="send">Send</button>
             </form>
+            <button class="btn btn-large" id="send">Send</button>
             <div id="feedback-close">
                 <a href="#" id="close-feedback">Close</a>
             </div>
