@@ -7,7 +7,7 @@
     margin-top: -100px;
 }
 
-#main-container2 {
+#main-container-step2 {
     display: none;
 }
 a {
@@ -58,7 +58,7 @@ a {
 }
 
 .food-group-item.removed{
-    background: url('../img/cross.png') top right no-repeat;
+    background: url('../img/cross2red.png') top right no-repeat;
     border: 10px solid #FF0000;
 }
 
@@ -71,6 +71,45 @@ img.food-img {
     text-align: center;
 }
 /* <<< Food groups */
+
+/* Card >>> */
+#options-container {
+    float: left;
+}
+#card-container {
+    float: right;
+}
+#card {
+    height: 154px;
+    width: 244px;
+    border: 2px dashed;
+    padding: 4px;
+}
+#card-content {
+    height: 140px;
+    width: 244px;
+}
+.message {
+    display: none;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid gray;
+    /* research how to not show border for last item */
+}
+.food-img-card {
+    padding: 2px;
+    margin: 2px;
+    background: url('../img/cross2.png') top right no-repeat;
+    border: 1px solid gray;
+}
+#name {
+    float: left;
+}
+#website {
+    float: right;
+}
+/* <<< Card */
 
 /* Footer >>> */
 #footer {

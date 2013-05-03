@@ -1,36 +1,38 @@
+var numberItems = 0;
+
 $(document).ready(function(){
-    if(!readCookie("digestion")){
+    // if(!readCookie("digestion")){
         // blur
         $('#welcome').modal();
         $('#header').foggy();
-        $('#main-container').foggy();
+        $('#main-container-step1').foggy();
         $('#footer').foggy();
-    } else {
-        var preset = readCookie("digestion");
-        selectItems(preset);
-        // eraseCookie('digestion');
-    }
+    // } else {
+    //     var preset = readCookie("digestion");
+    //     selectItems(preset);
+    //     // eraseCookie('digestion');
+    // }
 
     $('#start').click(function(){
         $('#welcome').modal('hide');
         $('#header').foggy(false);
-        $('#main-container').foggy(false);
+        $('#main-container-step1').foggy(false);
         $('#footer').foggy(false);
-        createCookie("digestion", $('#preset').val(), 90);
+        // createCookie("digestion", $('#preset').val(), 90);
         selectItems($('#preset').val());
         // checkGroup(null);
     });
 
-    $('#reset').click(function(){
-        deSelect();
-        eraseCookie('digestion');
-        $('#main-container1').show();
-        $('#main-container2').hide();
-        $('#welcome').modal();
-        $('#header').foggy();
-        $('#main-container').foggy();
-        $('#footer').foggy();
-    });
+    // $('#reset').click(function(){
+    //     deSelect();
+    //     // eraseCookie('digestion');
+    //     $('#main-container-step1').show();
+    //     $('#main-container-step2').hide();
+    //     $('#welcome').modal();
+    //     $('#header').foggy();
+    //     $('#main-container-step1').foggy();
+    //     $('#footer').foggy();
+    // });
 
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
@@ -38,9 +40,26 @@ $(document).ready(function(){
     });
 
     $('#makecard').click(function(){
-        $('#main-container1').hide();
-        $('#main-container2').show();
-        $('#card-container').append($('.food-group-item.removed'));
+        $('#main-container-step1').hide();
+        $('#main-container-step2').show();
+        numberItems = 0;
+        $('.food-group-item.removed').each(function () {
+            numberItems++;
+            $('#card-content').append('<img src="img/' + $(this).attr('id') + '.png" alt="' + $(this).attr('id') + '" class="food-img-card" />');
+        });
+        resizeImages();
+    });
+
+    $('.language').click(function(){
+        if (this.checked) {
+            // show message corresponding to ID on card
+            $('.message#' + $(this).attr('id')).show();
+        }
+        else if (!this.checked) {
+            // remove message from card
+            $('.message#' + $(this).attr('id')).hide();
+        }
+        resizeImages();
     });
 
     $('#feedback-tab').click(function(){
@@ -75,6 +94,18 @@ function selectItems(mode){
     if(mode == 'milk'){
         $('#dairy').addClass('removed');
     }
+}
+
+function resizeImages() {
+    $('.food-img-card').css('width', 244/numberItems + 'px');
+    console.log($('#messages-container').css('height'));
+    // need to calculate remaining height available -- 140 minus the above (convert to number)
+    // then decide how to best approach sizing and placing the images
+    // and get rid of simplistic calculation on first line here
+    // 
+    // then, next problem= how to scale background, or make cross size correspond to img size
+    // also want to make food img and border smaller, allowing cross to overlap.
+    // could solve both problems by creating an image copy for card but is worth it to load 2nd img?
 }
 
 // function checkGroup(group){

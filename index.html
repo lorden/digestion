@@ -37,12 +37,12 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-      <div class="row span12 container" id="reset-container">
+<!--       <div class="row span12 container" id="reset-container">
           <button class="btn btn-large btn-primary" id="reset">Start over</button>
-      </div>
+      </div> -->
     </div>
 
-    <div id="main-container1" class="container">
+    <div id="main-container-step1" class="container">
         <div class="row container accordion" id="food-groups">
             <div class="food-group span12 accordion-group">
                 <div class="food-group-title accordion-heading">
@@ -51,19 +51,19 @@
                 <div class="food-group-items accordion-body collapse in" id="animals">
                     <div class="accordion-inner">
                         <div id="beef" class="food-group-item">
-                            <img src="img/beef.png" alt="Beef" class="food-img" data-toggle="popover" data-placement="bottom" data-content="Cow"/>
+                            <img src="img/beef.png" alt="beef" class="food-img" data-toggle="popover" data-placement="bottom" data-content="Cow"/>
                         </div>
                         <div id="poultry" class="food-group-item">
-                            <img src="img/poultry.png" alt="Poultry" class="food-img" />
+                            <img src="img/poultry.png" alt="poultry" class="food-img" />
                         </div>
                         <div id="pork" class="food-group-item">
-                            <img src="img/pork.png" alt="Pork" class="food-img" />
+                            <img src="img/pork.png" alt="pork" class="food-img" />
                         </div>
                         <div id="fish" class="food-group-item">
-                            <img src="img/fish.png" alt="Fish" class="food-img" />
+                            <img src="img/fish.png" alt="fish" class="food-img" />
                         </div>
                         <div id="shellfish" class="food-group-item">
-                            <img src="img/shellfish.png" alt="Shellfish" class="food-img" />
+                            <img src="img/shellfish.png" alt="shellfish" class="food-img" />
                         </div>
                     </div>
                 </div>
@@ -75,13 +75,13 @@
                 <div class="food-group-items accordion-body collapse in" id="animal-products">
                     <div class="accordion-inner">
                         <div id="dairy" class="food-group-item">
-                            <img src="img/dairy.png" alt="Diary" class="food-img" />
+                            <img src="img/dairy.png" alt="dairy" class="food-img" />
                         </div>
                         <div id="eggs" class="food-group-item">
-                            <img src="img/eggs.png" alt="Eggs" class="food-img" />
+                            <img src="img/eggs.png" alt="eggs" class="food-img" />
                         </div>
                         <div id="honey" class="food-group-item">
-                            <img src="img/honey.png" alt="Honey" class="food-img" />
+                            <img src="img/honey.png" alt="honey" class="food-img" />
                         </div>
                     </div>
                 </div>
@@ -94,10 +94,10 @@
                 <div class="food-group-items accordion-body collapse in" id="nuts">
                     <div class="accordion-inner">
                         <div id="peanut" class="food-group-item">
-                            <img src="img/peanut.png" alt="Peanut" class="food-img" />
+                            <img src="img/peanut.png" alt="peanut" class="food-img" />
                         </div>
                         <div id="treenut" class="food-group-item">
-                            <img src="img/treenut.png" alt="Tree nuts" class="food-img" />
+                            <img src="img/treenut.png" alt="treenut" class="food-img" />
                         </div>
                     </div>
                 </div>
@@ -109,19 +109,19 @@
                 <div class="food-group-items accordion-body collapse in" id="other">
                     <div class="accordion-inner">
                         <div id="alcohol" class="food-group-item">
-                            <img src="img/alcohol.png" alt="Alcohol" class="food-img" />
+                            <img src="img/alcohol.png" alt="alcohol" class="food-img" />
                         </div>
                         <div id="corn" class="food-group-item">
-                            <img src="img/corn.png" alt="Corn" class="food-img" />
+                            <img src="img/corn.png" alt="corn" class="food-img" />
                         </div>
                         <div id="gluten" class="food-group-item">
-                            <img src="img/gluten.png" alt="Gluten" class="food-img" />
+                            <img src="img/gluten.png" alt="gluten" class="food-img" />
                         </div>
                         <div id="soy" class="food-group-item">
-                            <img src="img/soy.png" alt="Soy" class="food-img" />
+                            <img src="img/soy.png" alt="soy" class="food-img" />
                         </div>
                         <div id="wheat" class="food-group-item">
-                            <img src="img/wheat.png" alt="Wheat" class="food-img" />
+                            <img src="img/wheat.png" alt="wheat" class="food-img" />
                         </div>
                     </div>
                 </div>
@@ -132,12 +132,27 @@
         </div>
     </div>
 
-    <div id="main-container2" class="container">
+    <div id="main-container-step2" class="container">
       <div class="row span12 container" id="print-container">
         <button class="btn btn-large btn-primary" id="print">Print card</button>
       </div>
-      <div class="row span12 container" id="card-container">
-          <p>Happy card</p>
+      <div class="row span6 container" id="options-container">
+        <p>Show message in:</p>
+        <input type="checkbox" class="language" id="english"> English</input><br />
+        <input type="checkbox" class="language" id="spanish"> Spanish</input>
+      </div>
+      <div class="row span6 container" id="card-container">
+          <p>Your card</p>
+          <div id="card">
+            <div id="card-content">
+              <div id="messages-container">
+                <p class="message" id="english">I cannot eat these ingredients. Could you please help me identify food to enjoy without them?</p>
+                <p class="message" id="spanish">No puedo consumir estos ingredientes. Ud. me podria ayudar encontrar comida sin aquellos?</p>
+              </div>
+            </div>
+            <span id="name">Name</span>
+            <span id="website">www.name.com</span>
+          </div>
       </div>
     </div>
 
