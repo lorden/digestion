@@ -1,43 +1,20 @@
 var numberItems = 0;
 
 $(document).ready(function(){
-    // if(!readCookie("digestion")){
-        // blur
-        $('#welcome').modal();
-        $('#header').foggy();
-        $('#main-container-step1').foggy();
-        $('#footer').foggy();
-    // } else {
-    //     var preset = readCookie("digestion");
-    //     selectItems(preset);
-    //     // eraseCookie('digestion');
-    // }
+    // blur
+    $('#welcome').modal();
+    $('#header').foggy();
+    $('#main-container-step1').foggy();
+    $('#footer').foggy();
 
     $('.preselection').click(function(){
         $('#welcome').modal('hide');
         $('#header').foggy(false);
         $('#main-container-step1').foggy(false);
         $('#footer').foggy(false);
-        // createCookie("digestion", $('#preset').val(), 90);
         selectItems($('#preset').val());
-        // checkGroup(null);
     });
 
-    // $('#reset').click(function(){
-    //     deSelect();
-    //     // eraseCookie('digestion');
-    //     $('#main-container-step1').show();
-    //     $('#main-container-step2').hide();
-    //     $('#welcome').modal();
-    //     $('#header').foggy();
-    //     $('#main-container-step1').foggy();
-    //     $('#footer').foggy();
-    // });
-
-    $('.food-group-item').click(function(){
-        $(this).toggleClass('removed');
-        // checkGroup($(this).parent().parent().attr('id'));
-    });
 
     $('#makecard').click(function(){
         $('#main-container-step1').hide();
@@ -69,6 +46,11 @@ $(document).ready(function(){
     $('#close-feedback').live('click', function(){
         $('#feedback-form-div').animate({width: 'toggle'});
     });
+
+    $('.food-group-item').click(function(){
+        $(this).toggleClass('removed');
+    });
+
 
     $('#send').click(function(){
         //validate input
