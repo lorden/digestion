@@ -11,12 +11,16 @@
 #main-container-step2 {
     display: none;
 }
-a {
-    color: #0079cc;
+a, a:hover, a:visited {
+    color: #2F9843;
 }
 /* <<< Global elements */
 
 /* Welcome modal >>> */
+.modal-header {
+    text-align: center;
+}
+
 .modal-body {
     text-align: center;
 }
@@ -37,16 +41,18 @@ a {
 
 #header .navbar-inner {
     border-radius: 0;
-    background: #28ad00;
+    background: #005A31;
+}
+
+#socialmedia {
+    margin: -32px -10px 0 0;
+    float: right;
 }
 
 /* <<< Header */
 
 /* Food groups >>> */
 .food-group {
-/*
-    border: 1px solid #919ebd;
-*/
     background: #F6F6F6;
     margin: 0 0 10px 0;
     padding: 10px;
@@ -60,7 +66,7 @@ a {
     height: 110px;
     width: 110px;
     margin: 5px 10px;
-    border: 10px solid #8df06a;
+    border: 10px solid #2F9843;
     border-radius: 10px;
     background: #FFFFFF;
     float: left;
@@ -84,6 +90,10 @@ img.food-img {
 /* <<< Food groups */
 
 /* Card >>> */
+#makecard-container {
+    text-align: center;
+}
+
 #options-container {
     float: left;
 }
@@ -130,7 +140,7 @@ img.food-img {
 
 #footer .navbar-inner {
     border-radius: 0;
-    background: #3F5229;
+    background: #005A31;
 }
 
 #friends p {
@@ -146,7 +156,7 @@ img.food-img {
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
-    background: url('../img/feedback.png') no-repeat 5px 5px #F9CDAD;
+    background: url('../img/feedback.png') no-repeat 5px 5px #CBE32D;
     position: fixed;
     top: 50px;
     right: 0;
@@ -158,7 +168,7 @@ img.food-img {
     height: 270px;
     padding: 10px;
     border: 2px solid #000;
-    background: #F9CDAD;
+    background: #CBE32D;
     position: fixed;
     top: 50px;
     right: 0;
