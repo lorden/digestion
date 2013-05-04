@@ -90,8 +90,8 @@ function resizeImages() {
     // width available: 244
     // formula for the theoretical side length
     var itemWidth = Math.sqrt(244*height/numberItems);
-    // Number of rows -- container height divided by theoretical height of one item
-    var numberRows = Math.ceil(height/itemWidth);
+    // Number of rows -- container height divided by theoretical height of one item, or at least one
+    var numberRows = Math.max(Math.round(height/itemWidth), 1);
     // Width of each item initially set to row width divided by (maximum) number of items in row
     itemWidth = 244/Math.ceil(numberItems/numberRows);
     // but also check that height never exceeds container
