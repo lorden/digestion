@@ -78,7 +78,7 @@ a {
 }
 
 .food-group-item.removed{
-    background: url('../img/cross2red.png') top right no-repeat;
+    background: url('../img/cross-red.png') top right no-repeat;
     border: 10px solid #FF0000;
 }
 
@@ -108,6 +108,7 @@ img.food-img {
 #card-content {
     height: 140px;
     width: 244px;
+    text-align: center;
 }
 .message {
     display: none;
@@ -116,12 +117,6 @@ img.food-img {
     margin-bottom: 1px;
     border-bottom: 1px solid gray;
     /* research how to not show border for last item */
-}
-.food-img-card {
-    padding: 2px;
-    margin: 2px;
-    background: url('../img/cross2.png') top right no-repeat;
-    border: 1px solid gray;
 }
 #name {
     float: left;
