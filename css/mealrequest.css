@@ -173,6 +173,7 @@ img.food-img {
 }
 
 #feedback-close {
+    margin-top: -8px;
     width: 220px;
     font-size: 11px;
     text-align: right;
