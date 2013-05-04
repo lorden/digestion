@@ -90,22 +90,11 @@ img.food-img {
     height:100px;
     padding: 5px;
 }
-
-#print-container {
-    text-align: center;
-}
 /* <<< Food groups */
 
 /* Card >>> */
 #makecard-container {
     text-align: center;
-}
-
-#options-container {
-    float: left;
-}
-#card-container {
-    float: right;
 }
 #card {
     height: 154px;
@@ -126,11 +115,15 @@ img.food-img {
     border-bottom: 1px solid gray;
     /* research how to not show border for last item */
 }
-#name {
+#branding1 {
     float: left;
 }
-#website {
+#branding2 {
     float: right;
+}
+#print-container {
+    margin-top: 20px;
+    text-align: center;
 }
 /* <<< Card */
 
