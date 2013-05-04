@@ -1,18 +1,11 @@
 var numberItems = 0;
 
 $(document).ready(function(){
-    // blur
     $('#welcome').modal();
-    $('#header').foggy();
-    $('#main-container-step1').foggy();
-    $('#footer').foggy();
 
     $('.preselection').click(function(){
         $('#welcome').modal('hide');
-        $('#header').foggy(false);
-        $('#main-container-step1').foggy(false);
-        $('#footer').foggy(false);
-        selectItems($('#preset').val());
+        selectItems($(this).attr('id'));
     });
 
 
@@ -49,7 +42,9 @@ $(document).ready(function(){
 
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
+    console.log('clicked');
     });
+    console.log('loaded');
 
 
     $('#send').click(function(){
