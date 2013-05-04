@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.preselection').click(function(){
         $('#welcome').modal('hide');
         selectItems($(this).attr('id'));
+        $('#preselected').val($(this).attr('id'));
     });
 
 
