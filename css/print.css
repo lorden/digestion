@@ -1,0 +1,9 @@
+body {
+	visibility: hidden;
+}
+.printable {
+	visibility: visible;
+	position: absolute;
+    left: 0;
+    top: 0;
+}

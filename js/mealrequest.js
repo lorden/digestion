@@ -9,7 +9,6 @@ $(document).ready(function(){
         $('#preselected').val($(this).attr('id'));
     });
 
-
     $('#makecard').click(function(){
         $('#main-container-step1').hide();
         $('#main-container-step2').show();
@@ -31,6 +30,10 @@ $(document).ready(function(){
             $('.message#' + $(this).attr('id')).hide();
         }
         resizeImages();
+    });
+
+    $('#print').click(function(){
+        window.print();
     });
 
     $('#feedback-tab').click(function(){
