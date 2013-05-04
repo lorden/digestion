@@ -146,6 +146,10 @@ img.food-img {
 #friends p {
     margin: 0;
 }
+#friends a, #friends a:hover, #friends a:visited {
+    color: #FFFFFF;
+}
+
 /* <<< Footer */
 
 /* Feedback >>> */
