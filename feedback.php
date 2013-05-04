@@ -17,4 +17,4 @@ IP: $ip
 Browser: $browser
 MESSAGE;
 // send email
-mail('mealrequest@gmail.com', 'Feedback' . date('Y-m-d H:i:s'), $message);
+mail('mealrequest@gmail.com', 'Feedback - ' . date('Y-m-d H:i:s'), $message);
