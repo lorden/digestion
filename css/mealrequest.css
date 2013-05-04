@@ -99,6 +99,7 @@ img.food-img {
 #card-content {
     height: 140px;
     width: 244px;
+    text-align: center;
 }
 .message {
     display: none;
@@ -107,8 +108,6 @@ img.food-img {
     margin-bottom: 1px;
     border-bottom: 1px solid gray;
     /* research how to not show border for last item */
-}
-.food-img-card {
 }
 #name {
     float: left;

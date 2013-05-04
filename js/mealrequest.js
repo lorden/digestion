@@ -42,9 +42,7 @@ $(document).ready(function(){
 
     $('.food-group-item').click(function(){
         $(this).toggleClass('removed');
-    console.log('clicked');
     });
-    console.log('loaded');
 
 
     $('#send').click(function(){
@@ -84,60 +82,18 @@ function selectItems(mode){
 }
 
 function resizeImages() {
-    $('.food-img-card').css('width', Math.sqrt(244*(140-parseInt($('#messages-container').css('height'),10))/numberItems) + 'px');
     // height available
-    console.log(140-parseInt($('#messages-container').css('height'),10));
+    var height = 140-parseInt($('#messages-container').css('height'),10);
     // width available: 244
     // formula for the theoretical side length
-    console.log(Math.sqrt(244*(140-parseInt($('#messages-container').css('height'),10))/numberItems));
-    // decide how to best approach sizing and placing the images -- taking into account # rows/columns
-    // and get rid of simplistic calculation on first line here
-}
-
-// function checkGroup(group){
-//     if(group !== null){
-//         var root = '#' + group;
-//     } else {
-//         var root = '.food-group';
-//     }
-//     $(root).each(function(){
-//         var total = 0;
-//         var removed = 0;
-//         $(this).find('.food-group-item').each(function(){
-//             if($(this).hasClass('removed')){
-//                 removed += 1;
-//             }
-//             total += 1;
-//         });
-//         if(removed == 0){
-//             $(this).append('<img src="img/check.png" alt="" />');
-//         } else if(total === removed){
-//             $(this).append('<img src="img/cross.png" alt="" />');
-//         } else {
-//         }
-//     });
-// }
-
-function createCookie(name, value, days) {
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        var expires = "; expires=" + date.toGMTString();
-    } else var expires = "";
-    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
-}
-
-function readCookie(name) {
-    var nameEQ = escape(name) + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return unescape(c.substring(nameEQ.length, c.length));
+    var itemWidth = Math.sqrt(244*height/numberItems);
+    // Number of rows -- container height divided by theoretical height of one item
+    var numberRows = Math.ceil(height/itemWidth);
+    // Width of each item initially set to row width divided by (maximum) number of items in row
+    itemWidth = 244/Math.ceil(numberItems/numberRows);
+    // but also check that height never exceeds container
+    if (itemWidth*numberRows > height) {
+        itemWidth = height/numberRows;
     }
-    return null;
-}
-
-function eraseCookie(name) {
-    createCookie(name, "", -1);
+    $('.food-img-card').css('width', itemWidth + 'px');
 }
