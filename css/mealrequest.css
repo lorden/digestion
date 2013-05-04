@@ -17,6 +17,10 @@ a {
 /* <<< Global elements */
 
 /* Welcome modal >>> */
+.modal-header {
+    text-align: center;
+}
+
 .modal-body {
     text-align: center;
 }
@@ -38,6 +42,11 @@ a {
 #header .navbar-inner {
     border-radius: 0;
     background: #28ad00;
+}
+
+#socialmedia {
+    margin: -32px -10px 0 0;
+    float: right;
 }
 
 /* <<< Header */

@@ -21,6 +21,11 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mealrequest.js"></script>
 
+    <meta property="og:title" content="Meal Request" /> 
+    <meta property="og:image" content="http://mealrequest.com/logo64.jpg" /> 
+    <meta property="og:description" content="Make a card with pictures of any dietary restrictions or foods you'd rather avoid to easily communicate your allergens or preferences in restaurants, grocery stores, or other places you want to enjoy eating, all around the world." /> 
+    <meta property="og:url" content="http://mealrequest.com">
+
   </head>
 
   <body>
@@ -29,11 +34,17 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/"><img src="img/logo.png" alt="Meal Request"/></a>
-          <span class="subtitle">Vegetarian . Vegan . Gluten free . Lactose intolerant . Food Allergies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[FB] [TW] [G+]</span>
-          <div class="nav-collapse">
-            <ul class="nav">
-            </ul>
-          </div><!--/.nav-collapse -->
+          <span class="subtitle">Vegetarian . Vegan . Gluten free . Lactose intolerant . Food Allergies</span>
+          <div id="socialmedia">
+            <!-- Twittter -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mealrequest.com" data-text="Never use gestures to explain your diet again! Get a personalized card. #winning">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <!-- Facebook -->
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmealrequest.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+            <!-- Google+ -->
+            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+            <g:plusone></g:plusone>
+        </div>
         </div>
       </div>
 <!--       <div class="row span12 container" id="reset-container">
@@ -174,9 +185,9 @@
     <div id="welcome" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
         <div class="modal-header">
             <img src="img/welcome.jpg" alt="Welcome to Meal Request!" />
-            <p>Make a card with pictures of any dietary restrictions or foods you'd rather avoid to easily communicate your allergens or preferences in restaurants, grocery stores, or other places you want to enjoy eating, all around the world. Print your personalized card in moments.</p>
         </div>
         <div class="modal-body">
+            <p>Make a card with pictures of any dietary restrictions or foods you'd rather avoid to easily communicate your allergens or preferences in restaurants, grocery stores, or other places you want to enjoy eating, all around the world. Print your personalized card in moments.</p>
             <p>Choose what's best for you:</p>
             <button id="all" class="preselection btn btn-primary">Mostly omnivore</button>
             <button id="veget" class="preselection btn btn-primary">Vegetarian</button>
