@@ -69,7 +69,7 @@ a {
 }
 
 .food-group-item.removed{
-    background: url('../img/cross2red.png') top right no-repeat;
+    background: url('../img/cross-red.png') top right no-repeat;
     border: 10px solid #FF0000;
 }
 
@@ -109,10 +109,6 @@ img.food-img {
     /* research how to not show border for last item */
 }
 .food-img-card {
-    padding: 2px;
-    margin: 2px;
-    background: url('../img/cross2.png') top right no-repeat;
-    border: 1px solid gray;
 }
 #name {
     float: left;

@@ -15,7 +15,7 @@ $(document).ready(function(){
         numberItems = 0;
         $('.food-group-item.removed').each(function () {
             numberItems++;
-            $('#card-content').append('<img src="img/' + $(this).attr('id') + '.png" alt="' + $(this).attr('id') + '" class="food-img-card" />');
+            $('#card-content').append('<img src="img/card-' + $(this).attr('id') + '.png" alt="' + $(this).attr('id') + '" class="food-img-card" />');
         });
         resizeImages();
     });
@@ -84,15 +84,14 @@ function selectItems(mode){
 }
 
 function resizeImages() {
-    $('.food-img-card').css('width', 244/numberItems + 'px');
-    console.log($('#messages-container').css('height'));
-    // need to calculate remaining height available -- 140 minus the above (convert to number)
-    // then decide how to best approach sizing and placing the images
+    $('.food-img-card').css('width', Math.sqrt(244*(140-parseInt($('#messages-container').css('height'),10))/numberItems) + 'px');
+    // height available
+    console.log(140-parseInt($('#messages-container').css('height'),10));
+    // width available: 244
+    // formula for the theoretical side length
+    console.log(Math.sqrt(244*(140-parseInt($('#messages-container').css('height'),10))/numberItems));
+    // decide how to best approach sizing and placing the images -- taking into account # rows/columns
     // and get rid of simplistic calculation on first line here
-    // 
-    // then, next problem= how to scale background, or make cross size correspond to img size
-    // also want to make food img and border smaller, allowing cross to overlap.
-    // could solve both problems by creating an image copy for card but is worth it to load 2nd img?
 }
 
 // function checkGroup(group){
