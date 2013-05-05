@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
 
     $('#print').click(function(){
-        $.get('print.html');
+        $.get('printed.html');
         window.print();
     });
 
