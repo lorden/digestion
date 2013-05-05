@@ -5,8 +5,10 @@ $(document).ready(function(){
 
     $('.preselection').click(function(){
         $('#welcome').modal('hide');
-        selectItems($(this).attr('id'));
-        $('#preselected').val($(this).attr('id'));
+        var selected = $(this).attr('id');
+        $.get('selected.html?' + selected);
+        selectItems(selected);
+        $('#preselected').val(selected);
     });
 
     $('#makecard').click(function(){
@@ -33,6 +35,7 @@ $(document).ready(function(){
     });
 
     $('#print').click(function(){
+        $.get('print.html');
         window.print();
     });
 
