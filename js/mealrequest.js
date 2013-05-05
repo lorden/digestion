@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.preselection').click(function(){
         $('#welcome').modal('hide');
         var selected = $(this).attr('id');
+        _gaq.push(['_trackPageview', '/selected.htm?' + selected]);
         $.get('selected.html?' + selected);
         selectItems(selected);
         $('#preselected').val(selected);
@@ -35,6 +36,7 @@ $(document).ready(function(){
     });
 
     $('#print').click(function(){
+        _gaq.push(['_trackPageview', '/printed.htm']);
         $.get('printed.html');
         window.print();
     });
