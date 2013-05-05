@@ -112,8 +112,8 @@ img.food-img {
     font-size: 10px;
     line-height: 10px;
     margin-bottom: 1px;
-    border-bottom: 1px solid gray;
-    /* research how to not show border for last item */
+    padding-bottom: 1px;
+    border-bottom: 1px solid #BFBFBF;
 }
 #branding1 {
     float: left;
