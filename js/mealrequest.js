@@ -61,6 +61,12 @@ $(document).ready(function(){
         $('#feedback-form-div').html('<p>Thank you for your feedback</p>');
         $('#feedback-form-div').append(c);
     });
+
+    // Social Media
+    $('#facebook-holder').append('<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmealrequest.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>'); 
+    $('#google-holder').append('<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><div class="g-plusone" data-annotation="none"></div>');
+    $('#twitter-holder').append('<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mealrequest.com" data-text="Never use gestures to explain your diet again! Get a personalized card. #winning" data-count="none" id="twitter">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\'://platform.twitter.com/widgets.js\';fjs.parentNode.insertBefore(js,fjs);}}(document, \'script\', \'twitter-wjs\');</script>');
+  
 });
 
 function deSelect () {
