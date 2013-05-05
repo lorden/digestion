@@ -56,6 +56,18 @@ a, a:hover, a:visited {
     right: 0;
 }
 
+#twitter {
+    margin-right: 5px;
+}
+
+#paypal {
+    display: inline;
+}
+#paypal input {
+    width: auto;
+    margin-bottom: 15px;
+}
+
 /* <<< Header */
 
 /* Food groups >>> */
